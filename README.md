@@ -17,7 +17,7 @@ The primary data for this analysis was sourced from the "Las Vegas Historic Tour
 
 The data preparation process involved several stages to transform the raw PDF data into a clean, analyzable format:
 
-1.  **Initial Extraction & Manual Cleaning:** Due to the complexities of directly parsing the PDF programmatically for all tables, the PDF was first converted to a CSV file. This CSV was then meticulously reviewed and cleaned in Google Sheets. This manual step addressed initial parsing issues, corrected header alignment, removed obviously irrelevant non-data rows, and ensured a more structured tabular format suitable for import.
+1.  **Initial Extraction & Manual Cleaning:** Due to the complexities of directly parsing the PDF programmatically for all tables, the PDF was first converted to a CSV file. This CSV was then meticulously reviewed and cleaned in Google Sheets. This manual step addressed initial parsing issues, corrected header alignment, removed irrelevant non-data rows, and ensured a more structured tabular format suitable for import.
 2.  **Loading into Pandas & Further Refinement:** The cleaned CSV file was subsequently uploaded to Google Drive and loaded into a Pandas DataFrame within a Google Colab environment for final programmatic cleaning and preparation.
 3.  **Header Correction & Row Trimming (in Pandas):**
     * The correct row containing the column headers (e.g., "Year", "Visitor Volume", "Convention Attendance") was identified and programmatically set as the DataFrame's column headers.
@@ -48,4 +48,26 @@ The YoY growth bar chart vividly illustrates periods of rapid change. The most s
 
 ### Discussion of Key Periods and Events
 
-The sustained growth throughout the 1990s can be attributed to significant investment and the opening of several mega-resorts, which transformed Las Vegas into a premier global destination. The declines in 2008-2009 clearly align with the Global Financial Crisis, which impacted discretionary travel spending worldwide. The unprecedented disruption in 2020 and the subsequent strong recovery directly reflect the impact of the COVID-19 pandemic and the subsequent easing of travel restrictions, highlighting both the vulnerability and resilience of Las Vegas's tourism-dependent economy.
+The sustained growth throughout the 1990s can be attributed to significant investment and the opening of several mega-resorts, which transformed Las Vegas into a premier global destination. The declines in 2008-2009 align with the Global Financial Crisis, which impacted discretionary travel spending worldwide. The unprecedented disruption in 2020 and the subsequent strong recovery directly reflect the impact of the COVID-19 pandemic and the subsequent easing of travel restrictions, highlighting the vulnerability and resilience of Las Vegas's tourism-dependent economy.
+
+## Conclusion
+
+The analysis of Las Vegas' annual visitor volume from 1970 to 2024 reveals a clear long-term growth trend, although this growth has been punctuated by notable periods of decline, particularly during major economic downturns and global events like the COVID-19 pandemic. The Year-over-Year growth rate analysis further highlighted the dynamic nature of the tourism sector, showcasing significant fluctuations and periods of rapid recovery, especially following the 2020 downturn. While this study focused on annual trends due to the nature of the readily available historical data, future analysis could greatly benefit from more granular data (e.g., monthly visitor statistics) to explore seasonality in detail and delve deeper into the specific factors and events driving the observed patterns.
+
+## Tools Used
+
+The following tools and libraries were primarily utilized for this Las Vegas tourism trend analysis:
+
+* **Python:** The core programming language.
+* **Google Colab:** The cloud-based Jupyter notebook environment used for coding and execution.
+* **Google Sheets:** Utilized for the initial manual cleaning and structuring of the data after PDF conversion.
+* **Pandas:** For data loading, manipulation, cleaning, and calculation of the Year-over-Year growth rate.
+* **NumPy:** For numerical operations, often used in conjunction with Pandas.
+* **Matplotlib:** The foundational library for creating plots.
+* **Seaborn:** Used on top of Matplotlib for enhanced statistical visualizations (line plot and bar chart).
+
+  ## Code
+
+The complete data cleaning, analysis, and visualization process for this project can be found in the Jupyter Notebook file located in this repository:
+
+[LVCVA_Annual_Vistors.ipynb](https://colab.research.google.com/drive/12tCyIoUVm8NzBoe04MxlGM-nwA_ntZ6M?usp=sharing)
